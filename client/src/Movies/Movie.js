@@ -39,7 +39,7 @@ const Movie = (props) => {
   return (
     <div className="save-wrapper">
       <MovieCard key={movie.id} movie={movie} detail/>
-      
+      <div className='save-button' onClick={saveMovie}>Save</div>
     </div>
   );
 }

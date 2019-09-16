@@ -19,8 +19,7 @@ const MovieCard = props => {
           {star}
         </div>
       ))}
-       <div className="save-button">Save</div>
-      {props.detail ? <div className="save-button">Save</div> : <Link to={`/movies/${props.movie.id}`}>Read More About {props.movie.title}</Link>}
+      {!props.detail ? <Link to={`/movies/${props.movie.id}`}>Read More About {props.movie.title}</Link> : null}
       
       
     </div>
