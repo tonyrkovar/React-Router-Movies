@@ -14,14 +14,15 @@ const MovieCard = props => {
       </div>
       <h3>Actors</h3>
 
-      {props.movie.stars.map(star => (
+      {props.movie.stars && props.movie.stars.map(star => (
         <div key={star} className="movie-star">
           {star}
         </div>
       ))}
-      <br />
+       <div className="save-button">Save</div>
+      {props.detail ? <div className="save-button">Save</div> : <Link to={`/movies/${props.movie.id}`}>Read More About {props.movie.title}</Link>}
       
-      <Link to={`/movies/${props.movie.id}`}>Read More About {props.movie.title}</Link>
+      
     </div>
   )
 };

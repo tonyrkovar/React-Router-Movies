@@ -6,7 +6,6 @@ import MovieCard from './MovieCard';
 const MovieList = props => {
   const [movies, setMovies] = useState([])
   useEffect(() => {
-    const getMovies = () => {
       axios
         .get('http://localhost:5000/api/movies')
         .then(response => {
@@ -15,9 +14,6 @@ const MovieList = props => {
         .catch(error => {
           console.error('Server Error', error);
         });
-    }
-    
-    getMovies();
   }, []);
   
   return (
