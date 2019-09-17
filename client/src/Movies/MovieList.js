@@ -15,7 +15,7 @@ const MovieList = props => {
           console.error('Server Error', error);
         });
   }, []);
-  
+
   return (
     <div className="movie-list">
       {movies.map(movie => (
